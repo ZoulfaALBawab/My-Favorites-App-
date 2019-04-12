@@ -1,27 +1,53 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import {
+  ApolloProvider,
+  ApolloClient,
+  createBatchingNetworkInterface,
+} from 'react-apollo'
+import { render } from "react-dom";
+import { ApolloProvider } from "react-apollo";
+//creat Apollo Client :: 
+import ApolloClient from "apollo-boost";
+//gql function for parsing query string into a query document :: 
+import gql from "graphql-tag";
+
+
+
+const TITLE = 'Hello Client Side';
+
+const client = new ApolloClient({
+  uri: "https://48p1r2roz4.sse.codesandbox.io"
+});
+
+client
+  .query({
+    query: gql`
+      {
+        rates(currency: "USD") {
+          currency
+        }
+      }
+    `
+  })
+  .then(result => console.log(result));
+
+//Will i need this step ???!!!
+// const axiosGitHubGraphQL = axios.create({
+//   baseURL: 'https://api.github.com/graphql',
+//   headers: {
+//     Authorization: 'bearer YOUR_GITHUB_PERSONAL_ACCESS_TOKEN',
+//   },
+// });
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <ApolloProvider client={client}>
+        <h1>TITLE</h1>
+      </ApolloProvider>
+    )
   }
 }
 
