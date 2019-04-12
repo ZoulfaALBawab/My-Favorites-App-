@@ -1,20 +1,20 @@
 [
     {
-      "model": "movies.actor",
+      "model": "products.actor",
       "pk": 1,
       "fields": {
         "name": "Michael B. Jordan"
       }
     },
     {
-      "model": "movies.actor",
+      "model": "products.actor",
       "pk": 2,
       "fields": {
         "name": "Sylvester Stallone"
       }
     },
     {
-      "model": "movies.movie",
+      "model": "products.movie",
       "pk": 1,
       "fields": {
         "title": "Creed",
