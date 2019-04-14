@@ -1,11 +1,9 @@
-import graphene
-import backend.products.schema
+import graphene  
+import backend.favorites.schema
 
-
-class Query(backend.products.schema.Query, graphene.ObjectType):
+class Query(backend.favorites.schema.Query, graphene.ObjectType):  
     # This class will inherit from multiple Queries
     # as we begin to add more apps to our project
     pass
 
- 
-schema = graphene.Schema(query=Query)
+schema = graphene.Schema(query=Query)  

@@ -47,7 +47,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    'corsheaders.middleware.CorsMiddleware',
+ ]
+
 
 ROOT_URLCONF = 'backend.urls'
 
@@ -129,10 +131,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'backend.products'
-]
+    'backend.favorites',
+    'corsheaders',
+    
+  ]
  
 GRAPHENE = {  
-    'SCHEMA': 'backend.products.schema.schema'
+    'SCHEMA': 'backend.schema.schema'
 }
 
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST=['http://localhost:3000']
+
+ALLOWED_HOSTS = ['*']
+  

@@ -1,0 +1,68 @@
+[
+    {
+      "model": "favorites.artist",
+      "pk": 1,
+      "fields": {
+        "name": "Michael B. Jordan"
+      }
+    },
+    {
+      "model": "favorites.artist",
+      "pk": 2,
+      "fields": {
+        "name": "MM DD FF"
+      }
+    },
+    {
+      "model": "favorites.artist",
+      "pk": 3,
+      "fields": {
+        "name": "Abdul-Haleem"
+      }
+    },
+    {
+      "model": "favorites.song",
+      "pk": 1,
+      "fields": {
+        "title": "Suffering with Code",
+        "artists": [1],
+        "year":"2020"
+      }
+    },
+    {
+      "model": "favorites.song",
+      "pk": 2,
+      "fields": {
+        "title": "Suffering with Code",
+        "artists": [1],
+        "year":"2020"
+      }
+    },
+    {
+      "model": "favorites.albums",
+      "pk": 1,
+    "fields": {
+        "title": "Creed",
+        "songs": [1],
+        "year":"2019"
+          }
+    },
+    {
+      "model": "favorites.albums",
+      "pk": 2,
+    "fields": {
+        "title": "Creed",
+        "songs": [1],
+        "year":"2019"
+          }
+    },
+    {
+      "model": "favorites.albums",
+      "pk": 3,
+    "fields": {
+        "title": "Creed",
+        "songs": [1],
+        "year":"2019"
+          }
+    }
+  ]
