@@ -16,15 +16,15 @@ One frontend page (React) that communicates with the API (graphql) to retrieve l
 
 ## Usage
   Clone or download the repo and run npm install, then open three terminal windows:
-1. pip3 manage.py runserver
-2. npm start
+1. To run the Django Server: pip3 manage.py runserver
+2. To run the React Server: npm start
 3. To Test Your Data by The Terminal: 
 
-$ curl \
-  -X POST \
-  -H "Content-Type: application/json" \
-  --data '{ "query": "{ X { Y } }" }' \
-  http://127.0.0.1:8000/graphql/
+    $ curl \
+      -X POST \
+      -H "Content-Type: application/json" \
+      --data '{ "query": "{ X { Y } }" }' \
+      http://127.0.0.1:8000/graphql/
 
  
 
