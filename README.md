@@ -30,10 +30,10 @@ One frontend page (React) that communicates with the API (graphql) to retrieve l
 
 ## Requirements
 
-Python ^3.7
-Django 2.2
-React
-Apollo
+. Python ^3.7
+. Django 2.2
+. React Js
+. Apollo
 
 ## Development
 
