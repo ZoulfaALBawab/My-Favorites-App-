@@ -67,9 +67,9 @@ $ python3 manage.py loaddata NAME.json
 
 To Create React App:
 
-npx create-react-app my-app
-cd my-app
-npm start
+1. npx create-react-app my-app
+2. cd my-app
+3. npm start
 
 
 npm install apollo-boost react-apollo graphql --save
